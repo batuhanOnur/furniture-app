@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     },
 
     location: {
-        fontFamily: "semibold",
+        fontFamily:"semibold",
         fontSize: SIZES.medium,
         color: COLORS.gray
     },
@@ -35,8 +35,13 @@ const styles = StyleSheet.create({
         backgroundColor: "green",
         justifyContent: "center",
         zIndex: 999
+    },
+    cartNumber:{
+        fontFamily: "regular",
+        fontWeight: "600",
+        fontSize: 10,
+        color: COLORS.lightWhite
     }
-
 })
 
 export default styles
