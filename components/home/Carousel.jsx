@@ -36,7 +36,7 @@ export default Carousel
 
 const styles = StyleSheet.create({
     crouseContainer: {
-        flex:1,
-        alignItems: "center"
+      flex:1,
+      alignItems: "center",
     }
 })

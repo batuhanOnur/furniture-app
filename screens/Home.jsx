@@ -13,7 +13,7 @@ import ProductRow from '../components/products/ProductRow'
 const Home = () => {
   
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{flex: 1}}>
       <View style={styles.appBarWrapper}>
         <View style={styles.appBar}>
 
@@ -25,6 +25,7 @@ const Home = () => {
           <Text style={styles.location}>Izmir, Turkey</Text>
 
           <View styles={{ alignItems:"flex-end"}}>
+            
             <View style={styles.cartCount}>
               <Text style={styles.cartNumber}>8</Text>
             </View>
@@ -37,12 +38,12 @@ const Home = () => {
         </View>
       </View>
 
-      <ScrollView>
-        <Welcome />
-        <Carousel />
-        <Headings />
-        <ProductRow />
-      </ScrollView>
+        <ScrollView>
+          <Welcome />
+          <Carousel />
+          <Headings />
+          <ProductRow />
+        </ScrollView>
     </SafeAreaView>
   )
 }
