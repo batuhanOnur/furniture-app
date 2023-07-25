@@ -1,9 +1,9 @@
 import { Text, View,Image } from 'react-native'
 import React,{ useState } from 'react'
 import styles from './productDetails.style'
-import { Ionicons,SimpleLineIcons } from '@expo/vector-icons'
+import { Ionicons,SimpleLineIcons,MaterialCommunityIcons } from '@expo/vector-icons'
 import { TouchableOpacity } from 'react-native'
-import { COLORS } from '../constants'
+import { COLORS, SIZES } from '../constants'
 import fn1 from '../assets/images/fn1.jpg'
 
 const ProductDetails = ({navigation}) => {
@@ -92,7 +92,56 @@ const ProductDetails = ({navigation}) => {
         </View>
 
         <View style={styles.descriptionWrapper}>
-          <Text stlye={styles.desc}></Text>
+          <Text stlye={styles.description}>
+            Description
+          </Text>
+          <Text style={styles.descText}>
+          Lorem ipsum dolor sit amet, 
+          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+          labore et dolore magna aliqua. Ut enim ad minim veniam, 
+          quis nostrud exercitation ullamco laboris nisi ut aliquip 
+          ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
+          in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, 
+          sunt in culpa qui officia deserunt mollit anim id est 
+          laborum.
+          </Text>
+        </View>
+        
+        <View style={{marginBottom: SIZES.small}}>
+          <View style={styles.location}>
+            <View style={{
+              flexDirection:'row', 
+              alignItems: "center",
+              justifyContent:"space-between",
+              width: 70,
+            }}
+            >
+              <Ionicons 
+                name="locate-outline"
+                size={20}
+              />
+              <Text>Dallas</Text>
+            </View>
+
+            <View style={{
+              flexDirection:'row', 
+              alignItems: "center", 
+              justifyContent:"space-between",
+              width: 120
+              }}
+            >
+              <MaterialCommunityIcons 
+                name="truck-delivery-outline"
+                size={20}
+              />
+              <Text>Free Delivery</Text>
+            </View>
+          </View>
+        </View>
+
+        <View style={styles.cartRow}>
+            
         </View>
 
       </View>

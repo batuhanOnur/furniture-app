@@ -69,12 +69,39 @@ const styles = StyleSheet.create({
     ratingText: {
         fontFamily: "medium",
         color: COLORS.gray,
-        marginHorizontal: SIZES.small
+        paddingHorizontal: SIZES.large
     },
     descriptionWrapper: {
         marginTop: SIZES.large + 2,
         marginHorizontal: SIZES.large
-    }
+    },
+    description:{
+        fontFamily: "medium",
+        fontSize: SIZES.large -2 
+    },
+    descText: {
+        fontFamily: "regular",
+        fontSize:SIZES.small,
+        textAlign: "justify",
+        marginBottom: SIZES.small
+    },
+    location: {
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        backgroundColor: COLORS.secondary,
+        padding: 5,
+        borderRadius: SIZES.large,
+        marginHorizontal: 12
+    },
+    cartRow: {
+        marginHorizontal: 20,
+        paddingBottom: SIZES.small,
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        width: SIZES.width - 44,
+    },
 })
 
 export default styles
