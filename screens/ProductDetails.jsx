@@ -1,7 +1,7 @@
 import { Text, View,Image } from 'react-native'
 import React,{ useState } from 'react'
 import styles from './productDetails.style'
-import { Ionicons,SimpleLineIcons,MaterialCommunityIcons } from '@expo/vector-icons'
+import { Ionicons,SimpleLineIcons,MaterialCommunityIcons,Fontisto } from '@expo/vector-icons'
 import { TouchableOpacity } from 'react-native'
 import { COLORS, SIZES } from '../constants'
 import fn1 from '../assets/images/fn1.jpg'
@@ -141,7 +141,24 @@ const ProductDetails = ({navigation}) => {
         </View>
 
         <View style={styles.cartRow}>
-            
+
+          <TouchableOpacity 
+          onPress={() => {}} 
+          style={styles.cartBtn}
+          >
+            <Text style={styles.cartTitle}>BUY NOW</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity 
+          onPress={() => {}} 
+          style={styles.addCart}
+          >
+            <Fontisto 
+              name="shopping-bag" 
+              size={22} 
+              color={COLORS.lightWhite}
+            />
+          </TouchableOpacity>
         </View>
 
       </View>

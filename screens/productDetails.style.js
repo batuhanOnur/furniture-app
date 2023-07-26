@@ -94,14 +94,35 @@ const styles = StyleSheet.create({
         borderRadius: SIZES.large,
         marginHorizontal: 12
     },
-    cartRow: {
-        marginHorizontal: 20,
+    cartRow: {       
         paddingBottom: SIZES.small,
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        width: SIZES.width - 44,
+     
     },
+    cartBtn: {
+        width: SIZES.width * 0.7,
+        backgroundColor: COLORS.black,
+        padding:SIZES.small / 2 ,
+        borderRadius:SIZES.large,
+        marginLeft:12
+    },
+    cartTitle: {
+        fontFamily: "semibold",
+        fontSize: SIZES.medium,
+        color: COLORS.lightWhite,
+        marginLeft: SIZES.small
+    },
+    addCart:{
+        width: 37,
+        height: 37,
+        borderRadius: 50,
+        margin: SIZES.small,
+        backgroundColor: COLORS.black,
+        alignItems: 'center',
+        justifyContent: 'center'
+    }
 })
 
 export default styles

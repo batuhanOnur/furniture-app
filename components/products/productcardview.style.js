@@ -44,7 +44,8 @@ const styles = StyleSheet.create({
         position: "absolute",
         bottom:SIZES.xSmall,
         right: SIZES.xSmall
-    }
+    },
+
 })
 
 export default styles
