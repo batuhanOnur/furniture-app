@@ -1,6 +1,7 @@
 import { Text, View,Image } from 'react-native'
 import React,{ useState } from 'react'
 import styles from './productDetails.style'
+import { useRoute } from '@react-navigation/native'
 import { Ionicons,SimpleLineIcons,MaterialCommunityIcons,Fontisto } from '@expo/vector-icons'
 import { TouchableOpacity } from 'react-native'
 import { COLORS, SIZES } from '../constants'
@@ -8,6 +9,8 @@ import fn1 from '../assets/images/fn1.jpg'
 
 const ProductDetails = ({navigation}) => {
 
+  const route = useRoute()
+  const { item } = route.params
 
   const [ count,setCount ] = useState(1)
 
@@ -44,16 +47,18 @@ const ProductDetails = ({navigation}) => {
       </View>
 
       <Image 
-        source={fn1}
+        source={{
+          uri: item.imageUrl
+        }}
         style={styles.image}
       />
 
       <View style={styles.details}>
 
         <View style={styles.titleRow}>
-          <Text style={styles.title}>Product</Text>
+          <Text style={styles.title}>{ item.title }</Text>
           <View style={styles.priceWrapper}>
-            <Text style={styles.price}>$ 600</Text>
+            <Text style={styles.price}>$ { item.price }</Text>
           </View>
         </View>
 
@@ -96,15 +101,7 @@ const ProductDetails = ({navigation}) => {
             Description
           </Text>
           <Text style={styles.descText}>
-          Lorem ipsum dolor sit amet, 
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-          labore et dolore magna aliqua. Ut enim ad minim veniam, 
-          quis nostrud exercitation ullamco laboris nisi ut aliquip 
-          ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
-          in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, 
-          sunt in culpa qui officia deserunt mollit anim id est 
-          laborum.
+            { item.description }
           </Text>
         </View>
         
@@ -121,7 +118,7 @@ const ProductDetails = ({navigation}) => {
                 name="locate-outline"
                 size={20}
               />
-              <Text>Dallas</Text>
+              <Text>{ item.product_location }</Text>
             </View>
 
             <View style={{

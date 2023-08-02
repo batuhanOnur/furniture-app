@@ -98,8 +98,7 @@ const styles = StyleSheet.create({
         paddingBottom: SIZES.small,
         flexDirection: "row",
         justifyContent: "space-between",
-        alignItems: "center",
-     
+        alignItems: "center",  
     },
     cartBtn: {
         width: SIZES.width * 0.7,

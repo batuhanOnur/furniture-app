@@ -6,16 +6,18 @@ import { COLORS } from '../../constants'
 import { useNavigation } from '@react-navigation/native'
 
 
-const ProductCardView = () => {
+const ProductCardView = ({item}) => {
 
     const navigation = useNavigation()
 
   return (
-    <TouchableOpacity onPress={() => navigation.navigate("ProductDetails")}>
+    <TouchableOpacity onPress={() => navigation.navigate("ProductDetails",{item})}>
         <View style={styles.container}>
             <View style={styles.imageContainer}> 
                 <Image 
-                    source={require('../../assets/images/fn5.jpg')}
+                    source={{
+                        uri: item.imageUrl
+                    }}
                     style={styles.image}
                 />
             </View>
@@ -25,20 +27,20 @@ const ProductCardView = () => {
                 style={styles.title} 
                 numberOfLines={1}
                 >
-                    Product
+                    { item.title }
                 </Text>
 
                 <Text 
                 style={styles.supplier}
                 numberOfLines={1}
                 >
-                    Product
+                    { item.supplier }
                 </Text>
 
                 <Text 
                 style={styles.price}
                 >
-                    $ 235
+                    $ { item.price }
                 </Text>
             </View>
 
