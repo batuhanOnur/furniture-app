@@ -4,7 +4,7 @@ import { useCallback } from 'react';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen'
 import BottomTabNavigation from './navigation/BottomTabNavigation';
-import { Cart,ProductDetails } from './screens'
+import { Cart,NewRivals,ProductDetails } from './screens'
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 const Stack = createNativeStackNavigator()
@@ -54,6 +54,13 @@ export default function App() {
           <Stack.Screen 
             name="ProductDetails"
             component={ProductDetails}
+            options={{
+              headerShown:false
+            }}
+          />
+          <Stack.Screen 
+            name="ProductList"
+            component={NewRivals}
             options={{
               headerShown:false
             }}

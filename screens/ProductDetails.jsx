@@ -5,7 +5,6 @@ import { useRoute } from '@react-navigation/native'
 import { Ionicons,SimpleLineIcons,MaterialCommunityIcons,Fontisto } from '@expo/vector-icons'
 import { TouchableOpacity } from 'react-native'
 import { COLORS, SIZES } from '../constants'
-import fn1 from '../assets/images/fn1.jpg'
 
 const ProductDetails = ({navigation}) => {
 
